@@ -3,7 +3,8 @@
 #include <set>
 #include <thread>
 #include <chrono>
-//1. Самое простое решение задание, инвертирует все биты
+
+//1. Самое простое решение задания, инвертирует все биты
 void InvertBitInPointer(void * pointer, int length) {
     unsigned char* copy = (unsigned char*)pointer;
     for (int i = 0; i < length; i++) {
@@ -120,4 +121,7 @@ int main()
     std::cout << str << '\n';
 
     std::cout << "Parallel " << time4 - time3 << " Not Parallel " << time2 - time1;
+
+    delete[] str;
+    delete[] pointer;
 }
